@@ -11,8 +11,8 @@ spring:
     #url: jdbc:postgresql://localhost:5432/employee
     # For dockerization
     url: jdbc:postgresql://db:5432/employee
-    username: postgres
-    password: postgres
+    username: OPeshkov
+    password: 1qaz2wsx
   # JPA properties
   jpa:
     hibernate:

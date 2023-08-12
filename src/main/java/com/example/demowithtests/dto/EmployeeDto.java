@@ -15,7 +15,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public record EmployeeDto(
-
         @Schema(description = "Id in DB")
         Integer id,
 
@@ -57,6 +56,10 @@ public record EmployeeDto(
         this.startDate = startDate != null ? startDate : Date.from(Instant.now());
         this.gender = gender;
         this.addresses = addresses != null ? addresses : new HashSet<>();
+    }
 
+    // статичний метод для створення інстанції з мінімальними обов'язковими даними
+    public static EmployeeDto createMinimal(Integer id, String name, String email) {
+        return new EmployeeDto(id, name, null, email, null, null, null);
     }
 }
